@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Delicious+Handrawn&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:wght@200;300&family=Yellowtail&display=swap" rel="stylesheet">
+
+    <!-- icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" />
+
+    <!-- my style -->
+    <link rel="stylesheet" href="cs/style.css">
+</head>
+<body>
+    <!-- navbar start -->
+    <nav class="navbar">
+        <a href="#"class="navbar-logo">dissertcakekinian</a>
+
+        <div class="navbar-nav">
+            <a href="index.html">Home</a>
+            <a href="about.html">Tentang Kami</a>
+            <a href="#">Menu kami</a>
+            <a href="#contact">kontak kami</a>
+        </div>
+        
+
+        <div class="navbar-icon">
+            <a href="#"id="instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#"id="facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#"id="tiktok"><i class="fa-brands fa-tiktok"></i></a>
+            <a href="#"id="menu"><i class="fa-solid fa-bars"></i></a>
+        </div>
+        
+    </nav>
+    <!-- navbar end -->
+
+    <!-- Tabs -->
+<div class="tabs">
+  <button class="tab-btn active" data-tab="semua">Semua</button>
+  <button class="tab-btn" data-tab="bakso">Bakso</button>
+  <button class="tab-btn" data-tab="mieayam">Mie Ayam</button>
+  <button class="tab-btn" data-tab="minuman">Minuman</button>
+</div>
+
+<!-- Semua -->
+<div id="semua" class="tab-content active"></div>
+
+<!-- Bakso -->
+<div id="bakso" class="tab-content">
+  <div class="card" 
+     data-title="Bakso Telur" 
+     data-komposisi="Daging sapi giling,Telur rebus,Tepung tapioka,Kaldu sapi,Bawang goreng">
+    <img src="d:/download/koki.jpg" alt="Bakso Telur">
+    <h3>Bakso Telur</h3>
+    <div class="price">IDR 25K</div>
+</div>
+  <div class="card" data-title="Bakso Telur" data-desc="Bakso isi telur dengan kuah kaldu gurih, cocok dimakan saat hangat.">
+    <img src="d:/download/koki.jpg" alt="Bakso Telur">
+    <h3>Bakso Telur</h3>
+    <div class="price">IDR 25K</div>
+  </div>
+  <div class="card" data-title="Bakso Telur" data-desc="Bakso isi telur dengan kuah kaldu gurih, cocok dimakan saat hangat.">
+    <img src="d:/broden/istockphoto-506916161-1024x1024.jpg" alt="Bakso Telur">
+    <h3>Bakso Telur</h3>
+    <div class="price">IDR 25K</div>
+  </div>
+  <div class="card" data-title="Bakso Telur" data-desc="Bakso isi telur dengan kuah kaldu gurih, cocok dimakan saat hangat.">
+    <img src="d:/broden/istockphoto-506916161-1024x1024.jpg" alt="Bakso Telur">
+    <h3>Bakso Telur</h3>
+    <div class="price">IDR 25K</div>
+  </div>
+  <div class="card" data-title="Bakso Telur" data-desc="Bakso isi telur dengan kuah kaldu gurih, cocok dimakan saat hangat.">
+    <img src="d:/broden/istockphoto-506916161-1024x1024.jpg" alt="Bakso Telur">
+    <h3>Bakso Telur</h3>
+    <div class="price">IDR 25K</div>
+  </div>
+  <div class="card" data-title="Bakso Telur" data-desc="Bakso isi telur dengan kuah kaldu gurih, cocok dimakan saat hangat.">
+    <img src="d:/broden/istockphoto-506916161-1024x1024.jpg" alt="Bakso Telur">
+    <h3>Bakso Telur</h3>
+    <div class="price">IDR 25K</div>
+  </div>
+
+</div>
+
+<!-- Mie Ayam -->
+<div id="mieayam" class="tab-content">
+  <div class="card">
+    <img src="d:/broden/Lucid_Origin_a_surreal_and_vibrant_cinematic_photo_of_Modern_f_2.jpg" alt="Mie Ayam Original">
+    <h3>Mie Ayam Original</h3>
+    <div class="price">IDR 18K</div>
+  </div>
+</div>
+
+<!-- Minuman -->
+<div id="minuman" class="tab-content">
+  <div class="card">
+    <img src="d:/download/Lucid_Origin_A_cinematic_midshot_photo_of_a_chef_in_dark_apron_1.jpg" alt="Es Teh Manis">
+    <h3>Es Teh Manis</h3>
+    <div class="price">IDR 5K</div>
+  </div>
+</div>
+
+<div id="productModal" class="modal">
+  <div class="modal-content">
+    <img id="modalImg" src="" alt="">
+    <h2 id="modalTitle"></h2>
+    <div class="komposisi-header">Komposisi:</div>
+    <ul id="modalKomposisi">
+      <!-- List akan diisi dengan JavaScript -->
+    </ul>
+  </div>
+</div>
+     
+    <!-- footer start -->
+    <section id="contact" class="kontak">
+        <footer class="foot">
+            <h1>dissertcakekinian</h1>
+            <div class="isi">
+                <div class="kanan">
+                    <p class="jalan"><span><i class="fa-solid fa-map-location-dot"></i></span> Jl. Ambulu-Watu Ulo</p>
+                    <p class="email"><span><i class="fa-solid fa-envelope"></i></span> didinbroden5@gmail.com</p>
+                    <p class="no"><span><i class="fa-solid fa-phone"></i></span> +82330755390</p>
+                </div>
+
+                <div class="tengah">
+                    <h3 class="kata">buka terus kalo tutup berarti udah kaya</h3>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+                    <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+                </div>
+
+                <div class="kiri">
+                    <p><span>setiap hari : </span>09.00 - 20.00</p>
+                    <p><span>pre-order grill : </span>H - 1</p>
+                </div>
+
+            </div>
+        </footer>
+    </section>
+    <!-- footer ends -->
+    <script src="jj/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,333 @@
+:root {
+    --primary: #512a04;
+    --seccondary: #e3e3e3;
+    --bg: #010101;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+}
+
+body{
+    font-family: 'poppins',sans-serif;
+    background-color: #e60909;
+    color: #fff;
+}
+
+/* navbar */
+.navbar {
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.8rem 7%;
+    background-color: #000; /* default hitam */
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+    transition: all 0.7s ease;
+}
+/* Navbar di index.html mulai transparan */
+.index-navbar {
+    background-color: transparent;
+}
+.navbar.hidden {
+    transform: translateY(-100%); 
+}
+.navbar.visible {
+    background-color: #000000 !important; /* Paksa background hitam */
+    transform: translateY(0); /* Kembali ke posisi normal */
+}
+.navbar .navbar-logo {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #fff;
+}
+.navbar .navbar-nav a {
+    color: #fff;
+    display: inline-block;
+    font-size: 1rem;
+    margin: 0 1rem;
+}
+/* efek start */
+.navbar .navbar-nav :hover{
+    color: var(--seccondary);
+}
+.navbar .navbar-nav ::after{
+    content:'' ;
+    display: block;
+    padding-bottom: 0.5;
+    border-bottom: 0.1rem solid var(--seccondary); 
+    transform: scaleX(0);   
+}
+.navbar .navbar-nav :hover::after{
+    transform: scaleX(1);
+    transition: 0.2s linear;
+}
+/* efek end */
+.navbar .navbar-icon a{
+    color: #fff;
+    margin: 0 0.5rem;
+}
+.navbar .navbar-icon :hover{
+    color: var(--seccondary);
+}
+#menu {
+    display: none;
+}
+/* navbar end */
+
+/* menu start */
+.section-title {
+  grid-column: 1 / -1;
+  font-size: 20px;
+  font-weight: bold;
+  margin: 30px 0 0px;
+  text-align: left;
+  color: #333;
+}
+.tabs {
+  display: flex;
+  justify-content: center;
+  padding: 15px;
+  margin-top: 70px;
+}
+.tabs button {
+  background: #fff;
+  border: none;
+  padding: 10px 20px;
+  margin: 0 5px;
+  border-radius: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.tabs button.active {
+  background: #333;
+  color: #fff;
+}
+
+
+/* Container Produk */
+.tab-content {
+  color: #000;
+  display: none;
+  padding: 30px;
+}
+.tab-content.active {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* selalu 4 kolom */
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.card {
+  background: #fff;
+  border-radius: 15px;
+  padding: 5px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  text-align: center;
+}
+.card img {
+  width: 100%;
+  height: auto;
+  border-radius: 15px;
+}
+.card h3{
+  margin-top: 5px;
+}
+.card .price {
+  font-weight: bold;
+}
+
+
+/* Modal background */
+.modal {
+  display: none; 
+  position: fixed; 
+  z-index: 999; 
+  left: 0; top: 0; 
+  width: 100%; height: 100%; 
+  background: rgba(0,0,0,0.6);
+  justify-content: center;
+  align-items: center;
+}
+/* Isi modal */
+.modal-content {
+  background: #fff;
+  padding: 5px;
+  border-radius: 15px;
+  width: 400px;
+  max-width: 50%;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.modal-content img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 15px;
+}
+
+.modal-content h2 {
+  padding-left: 10px;
+  margin-top: -10px;
+  color: #555;
+}
+
+.modal-content .komposisi-header {
+  padding-left: 10px;
+  font-weight: bold;
+  color: #555;
+}
+
+#modalKomposisi {
+  color: #555;
+  padding-left: 40px;
+}
+
+@keyframes fadeIn {
+  from { transform: scale(0.8); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+/* menu end */
+
+/* footer start */
+.kontak .foot{
+  background: url(d:/download/Lucid_Origin_A_cinematic_closeup_photo_of_a_modern_hanging_lam_1.jpg);
+  background-size: cover;
+  background-position:bottom;
+
+  color: #fdf9f6;
+  padding: 50px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 300px;
+}
+.kontak .foot h1 {
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+.tengah a {
+  color: #fdf9f6;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  margin: 0 10px;
+  border: 1.9px solid #D4A373; /* White circular border for hole effect */
+  border-radius: 50%;
+  text-decoration: none;
+}
+.tengah a:hover {
+  background-color: #D4A373; /* White background on hover */
+  color: #000;
+  transition: 0.5s;
+}
+.isi {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap; 
+  gap: 40px;
+}
+.isi span{
+  color: #D4A373;
+}
+/* Bagi kolom biar rata */
+.isi > div {
+  flex: 1;
+  min-width: 200px; /* biar gak terlalu kecil */
+}
+/* footer ends */
+
+/* menu end */
+
+/* media queries */
+/* laptop */
+@media (max-width: 1366px) {
+  html {
+    font-size: 75%;
+  }
+}
+
+
+
+/* HP */
+@media (max-width: 576px) {
+  html {
+    font-size: 55%;
+  }
+  
+  #menu {
+    display: inline-block;
+  }
+
+  .navbar .navbar-nav {
+    position: absolute;
+    top: 100%; 
+    right: -100%;
+    background-color: #232222;
+    width: auto;
+    height: auto;
+    transition: 0.3s;
+  }
+
+  .navbar .navbar-nav.active {
+    right: 0;
+  }
+
+  .navbar .navbar-nav.active a {
+    display: block;
+    margin: 1.5rem;
+    padding: 0.5rem;
+    font-size: 2rem;
+  }
+
+  .navbar .navbar-nav a::after{
+    transform-origin: 0 0;
+  }
+
+  .navbar .navbar-nav a:hover::after{
+    transform: scaleX(0.5);
+  }
+
+  .tab-content.active {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* selalu 4 kolom */
+}
+
+  
+
+  /* footer */
+  .isi{
+    gap: 10px;
+  }
+  .tengah {
+    order: -1; /* pindahin ke atas */
+  }
+  .kiri {
+    order: -1; /* pindahin ke atas */
+  }
+
+  .tengah a {
+    width: 28px; /* Even smaller icons */
+    height: 28px;
+    margin: 0 5px;
+  }
+  .tengah a i {
+    font-size: 9px;}
+
+}
+
